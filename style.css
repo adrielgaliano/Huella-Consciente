@@ -1,0 +1,90 @@
+
+
+/*Propiedades para los títulos, subtítulos y body*/
+h1{
+  font-family: Roboto;
+  color: #000000;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #632502;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+p {
+  font-family: Roboto;
+  color:#000000;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+body {
+  background-color: #632502;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(235, 88, 4);
+  font-weight: bold;
+}
+/*Propiedades para id*/
+
+#banner {
+  background-color: #e68f67;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#contenido {
+  background-color: #361501;
+  margin: 20px;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#cajas {
+  background-color: #ffd3b6; 
+  margin: 20px; 
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  }
+
+#titulosencontenido {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffd3b6;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+#titulo-contenido {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#fotologo {
+  border-radius: 20px;
+}
+/*clases*/
+.fila-columnas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.columnas {
+  width: 46%;
+  box-sizing: border-box;
+  background-color: #ffd3b6; 
+  margin: 10px;
+  border-radius: 20px;
+}
