@@ -5,7 +5,7 @@ h1{
   font-family: Roboto;
   color: #000000;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 
@@ -13,14 +13,14 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   color: #632502;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 p {
   font-family: Roboto;
   color:#000000;
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -31,11 +31,6 @@ a {
   text-decoration: none;
   color: rgb(235, 88, 4);
   font-weight: bold;
-}
-
-img {
-  max-wigdth: 100%
-  margin: auto;
 }
 /*Propiedades para id*/
 
@@ -49,28 +44,26 @@ img {
 
 #contenido {
   background-color: #361501;
-  margin: 10px 0;
+  margin: 20px;
   padding: 12px;
   box-sizing: border-box;
   text-align: center;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 20px;
 }
 
 #cajas {
-  background-color: #ffd3b6;  
+  background-color: #ffd3b6; 
+  margin: 20px; 
   padding: 10px;
   text-align: center;
   border-radius: 20px;
-  width: 90%;
-  margin: 10px auto;
   }
 
 #titulosencontenido {
   font-family: 'Montserrat', sans-serif;
   color: #ffd3b6;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 #titulo-contenido {
