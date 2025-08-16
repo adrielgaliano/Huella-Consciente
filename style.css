@@ -1,90 +1,186 @@
-
-
-/*Propiedades para los títulos, subtítulos y body*/
-h1{
-  font-family: Roboto;
-  color: #000000;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #632502;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-p {
-  font-family: Roboto;
-  color:#000000;
-  font-weight: lighter;
-  font-size: 16px;
+/* Colores principales */
+:root {
+  --beige: #f6f0e9;
+  --naranja: #d67d4b;
+  --marron: #4a2b17;
 }
 
 body {
-  background-color: #632502;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--beige);
+  color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(235, 88, 4);
-  font-weight: bold;
-}
-/*Propiedades para id*/
-
-#banner {
-  background-color: #e68f67;
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-  border-radius: 20px;
-}
-
-#contenido {
-  background-color: #361501;
-  margin: 20px;
-  padding: 12px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 20px;
-}
-
-#cajas {
-  background-color: #ffd3b6; 
-  margin: 20px; 
-  padding: 10px;
-  text-align: center;
-  border-radius: 20px;
-  }
-
-#titulosencontenido {
-  font-family: 'Montserrat', sans-serif;
-  color: #ffd3b6;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-#titulo-contenido {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-#fotologo {
-  border-radius: 20px;
-}
-/*clases*/
-.fila-columnas {
+/* Header */
+header {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--naranja);
+  padding: 10px 40px;
+  color: white;
 }
 
-.columnas {
-  width: 46%;
-  box-sizing: border-box;
-  background-color: #ffd3b6; 
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo en el header */
+header .logo img {
+  width: 50px;   /* ajusta el tamaño */
+  height: auto;
+  margin-right: 10px; /* un pequeño espacio con el texto */
+}
+
+/* Secciones */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Anuncios */
+.anuncios .anuncios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.anuncios .card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.anuncios .card img {
+  width: 180px;   /* tamaño controlado */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+/* Botones */
+button {
+  background: var(--naranja);
+  color: white;
+  border: none;
+  padding: 10px 20px;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.dark {
+  background: var(--marron);
+}
+
+/* Adopta */
+.adopta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--naranja);
+  color: white;
+  padding: 40px;
+}
+
+.adopta .text {
+  max-width: 400px;
+}
+
+.adopta img {
+  width: 350px;   /* más chico */
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Testimonios */
+.testimonios .testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonios .card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 220px;
+}
+
+.testimonios .card img {
+  width: 120px;   /* pequeño */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+/* Mapa */
+.mapa {
+  background: #eee;
+  padding: 50px;
+  font-weight: bold;
+}
+
+/* Donaciones */
+.donaciones {
+  padding: 40px;
+}
+
+.donaciones button {
+  background: var(--marron);
+}
+
+/* Footer */
+footer {
+  background: var(--marron);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-links {
+  display: flex;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .copy {
+  margin-top: 20px;
+  font-size: 14px;
 }
