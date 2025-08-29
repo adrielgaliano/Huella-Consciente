@@ -6,76 +6,103 @@
   <title>Anunciantes - Huella Consciente</title>
   <link rel="icon" href="images/Isotipo_sin_fondo.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="images/Isotipo_sin_fondo.png" alt="Huella Consciente">
-      <span>Huella Consciente</span>
+      <a href="index.html">
+        <img src="images/Isotipo_sin_fondo.png" alt="Huella Consciente">
+        <span>Huella Consciente</span>
+      </a>
     </div>
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
     <nav>
-      <ul>
+      <ul class="menu-center" id="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="adoptar.html" class="btn">Adopta</a></li>
-        <li><a href="#">Donaciones</a></li>
-        <li><a href="Anunciantes.html" class="active">Anunciantes</a></li>
+        <li><a href="adoptar.html">Adopta</a></li>
+        <li><a href="Anunciantes.html">Aliados Estrategicos</a></li>
         <li><a href="refugios.html">Refugios</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+
+    <div class="donar-btn">
+      <a href="donaciones.html">Donar 🤎</a>
+    </div>
   </header>
 
+  <script src="js/menu.js"></script>
+
   <!-- Sección Anuncios -->
-  <section class="anuncios">
-    <h2>Nuestros Anuncios</h2>
-    <p>Estos son los sponsors que nos ayudan a seguir adelante con la misión de salvar vidas.</p>
-
-    <div class="grid">
-      <!-- Sponsor 1 -->
-      <div class="card">
-        <h3>Ejemplo 1</h3>
-        <img src="images/sponsor1.jpg" alt="Ejemplo 1">
-      </div>
-
-      <!-- Sponsor 2 -->
-      <div class="card">
-        <h3>Ejemplo 2</h3>
-        <img src="images/sponsor2.jpg" alt="Ejemplo 2">
-      </div>
-
-      <!-- Sponsor 3 -->
-      <div class="card">
-        <h3>Ejemplo 3</h3>
-        <img src="images/sponsor3.jpg" alt="Ejemplo 3">
+<section class="refugios">
+  <h2>Nuestros Aliados Estrategicos</h2>
+  <p>Estos son los Aliados Estrategicos que nos ayudan a seguir adelante con la misión de salvar vidas.</p>
+  
+  <div class="grid">
+    <div class="card">
+      <img src="images/sponsor1.jpg" alt="Logo de MBM Tortas" class="refugio-img">
+      <h3>MBM Tortas</h3>
+      <p> </p>
+      
+      <div class="social-links">
+        <a href="https://instagram.com/mbm.tortas" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5492615056859" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-  </section>
+    <div class="card">
+      <img src="images/sponsor2.jpg" alt="Logo de MBM Tortas" class="refugio-img">
+      <h3>First Packing s.r.l.</h3>
+      <p> </p>
+      
+      <div class="social-links">
+        <a href="https://instagram.com/mbm.tortas" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5492615056859" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-logo">
-      <h3>HUELLA CONSCIENTE</h3>
+<footer>
+  <div class="footer-logo">
+    <img src="images/Isotipo_sin_fondo_blanco.png" alt="Huella Consciente Logo" width="80">
+    <h3>HUELLA CONSCIENTE</h3>
+  </div>
+
+  <div class="footer-links">
+    <div>
+      <h4>Encontranos:</h4>
+      <a href="https://www.tiktok.com/@huellaconsciente.oficial"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@huellaconsciente.oficial"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/huellaconsciente.oficial"><i class="fab fa-instagram"></i></a>
     </div>
-    <div class="footer-links">
-      <p>Encuéntranos:</p>
-      <div class="socials">
-        <span><a href="https://www.tiktok.com/@huellaconsciente.oficial">TikTok</a></span>
-        <span><a href="https://www.instagram.com/huellaconsciente.oficial/">Instagram</a></span>
-        <span><a href="https://www.youtube.com/@huellaconsciente.oficial">Youtube</a></span>
-      </div>
+
+    <div>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="Anunciantes.html" class="active">Anunciantes</a></li>
+        <li><a href="Anunciantes.html">Anunciantes</a></li>
       </ul>
+    </div>
+
+    <div>
       <ul>
         <li><a href="adoptar.html">Adopciones</a></li>
-        <li><a href="#">Donaciones</a></li>
+        <li><a href="donaciones.html">Donaciones</a></li>
         <li><a href="refugios.html">Refugios</a></li>
       </ul>
     </div>
-    <p class="copy">© 2025 Huella Consciente - Todos los derechos reservados</p>
-  </footer>
+  </div>
+
+  <div class="copy">
+    © 2025 Huella Consciente - Todos los derechos reservados
+  </div>
+</footer>
 </body>
 </html>

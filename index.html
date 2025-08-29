@@ -4,122 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Huella Consciente</title>
-  <link rel="icon" href= "images/Isotipo_sin_fondo.png">
+  <link rel="icon" href="images/Isotipo_sin_fondo.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="images/Isotipo_sin_fondo.png" alt="Huella Consciente">
-      <span>Huella Consciente</span>
+      <a href="index.html">
+        <img src="images/Isotipo_sin_fondo.png" alt="Huella Consciente">
+        <span>Huella Consciente</span>
+      </a>
     </div>
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
     <nav>
-      <ul>
+      <ul class="menu-center" id="menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="adoptar.html" class="btn">Adopta</a></li>
-        <li><a href="#">Donaciones</a></li>
-        <li><a href="Anunciantes.html" class="active">Anunciantes</a></li>
+        <li><a href="adoptar.html">Adopta</a></li>
+        <li><a href="Anunciantes.html">Aliados Estrategicos</a></li>
         <li><a href="refugios.html">Refugios</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+
+    <div class="donar-btn">
+      <a href="donaciones.html">Donar 🤎</a>
+    </div>
   </header>
 
-   <section class="anuncios">
-    <div class="text">
-      <h1>PAGINA EN DESARROLLO</h1>
-      <p>Todas las funciones todavia no estan disponbles</p>
-    </div>
-    <div class="image">
-      <img src="images/en_construccion.jpg" alt="Desarrollo">
-    </div>
+  <script src="js/menu.js"></script>
+
+  <!-- Pitch -->
+  <section class="pitch">
+    <h1>Un puente entre refugios y familias</h1>
+    <p>
+      Huella Consciente es una plataforma que conecta refugios de animales con personas que buscan
+      adoptar o colaborar. Nuestro objetivo es facilitar la difusión de animales en adopción, centralizar
+      donaciones y generar consciencia sobre la importancia de la adopción responsable.
+    </p>
   </section>
-  <!-- Anuncios -->
-  <section class="anuncios">
-    <h2>Anuncios</h2>
-    <p>Los anuncios ayudan a mantener nuestro sitio y a nuestros amigos peludos.</p>
-    <button><a href="Anunciantes.html" class="active">Ver Anunciantes</a></button>
-    <div class="anuncios-grid">
-      <div class="card">
-        <img src="images/perro_feliz_anuncio.jpeg" alt="Perro">
-        <p><strong>Perro Buscando Hogar</strong><br>Raza: Labrador | Edad: -</p>
+
+  <!-- Video -->
+  <section class="video-section">
+    <h2>Conocé más sobre nuestro proyecto</h2>
+    <iframe src="https://www.youtube.com/embed/RH0Aqno4NK8?si=-OnGUa3QWD4as-cO" 
+            title="Video explicativo Huella Consciente"
+            allowfullscreen></iframe>
+  </section>
+
+  <!-- Aporte -->
+  <section class="aporte">
+    <div class="aporte-text">
+      <h2>Tu aporte hace la diferencia. ¡Súmate!</h2>
+      <p>
+        Con tu ayuda podemos darle una segunda oportunidad a muchos animales. 
+        Súmate, cada gesto transforma vidas.
+      </p>
+      <div class="aporte-list">
+        <span>🐾 Alimento</span>
+        <span>🐾 Vacunas</span>
+        <span>🐾 Castraciones</span>
+        <span>🐾 Tránsito</span>
+        <span>🐾 Medicamentos</span>
       </div>
-      <div class="card">
-        <img src="images/gatito_feliz_anuncio.jpeg" alt="Gato">
-        <p><strong>Gato Necesita Casa</strong><br>Raza: Siamés | Edad: 1</p>
-      </div>
+    </div>
+    <img src="images/index_aporte.jpeg" alt="Animales cuidados">
+  </section>
+
+  <!-- Integrantes -->
+  <section class="integrantes">
+    <img src="images/index_equipo.jpeg" alt="Equipo Huella Consciente">
+    <div class="integrantes-text">
+      <h2>Quiénes lo integramos</h2>
+      <p>
+        Somos un grupo de 3 alumnos de la <a href="https://mzapata.uncuyo.edu.ar/"><strong>Escuela de Comercio Martín Zapata</strong></a> de Mendoza, 
+        con habilidades en investigación, resolución de problemas, comunicación, programación y diseño digital. 
+        Lo que nos une es el compromiso con la adopción responsable y el bienestar animal.
+      </p>
     </div>
   </section>
 
-  <!-- Adopta con amor -->
-  <section class="adopta">
-    <div class="text">
-      <h2>¡Adopta con Amor!</h2>
-      <p>Brindamos visibilidad a perros y gatos en situación de abandono en Mendoza.</p>
-      <button><a href="https://www.instagram.com/huellaconsciente.oficial/" class="active">Conoce más</a></button>
-      <button class="dark"><a href="refugios.html" class="active">Ver Refugios</a></button>
-    </div>
-    <div class="image">
-      <img src="images/perro_caja.jpeg" alt="Perro en caja">
-    </div>
+  <!-- Colabora -->
+  <section class="colabora">
+    <h2>Colaborá y sé parte del cambio</h2>
+    <a href="contacto.html">Contacto</a>
   </section>
 
-  <!-- Testimonios -->
-  <section class="testimonios">
-    <h2>Testimonios</h2>
-    <p>Historias de adopción que te tocarán el corazón.</p>
-    <button>Leer Más</button>
-    <div class="testimonios-grid">
-      <div class="card">
-        <img src="images/testimonio_1.jpeg" alt="Testimonio">
-        <p><strong>Mi nuevo mejor amigo</strong><br>Adopté a Max y le ha llenado mi vida de alegría.</p>
-        <span>- Laura G.</span>
-      </div>
-      <div class="card">
-        <img src="images/testimonio_2.jpeg" alt="Testimonio">
-        <p><strong>Un amor a primera vista</strong><br>La adopción de Luna fue la mejor decisión que tomé.</p>
-        <span>- Carlos M.</span>
-      </div>
+  <!-- Consciencia -->
+  <section class="consciencia">
+    <h2>Un llamado a la consciencia</h2>
+    <p>
+      Miles de animales esperan una segunda oportunidad. 
+      Cada acción cuenta: adoptar, difundir, donar o simplemente compartir el mensaje. 
+      Juntos podemos construir una sociedad más responsable y compasiva.
+    </p>
+  </section>
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <img src="images/Isotipo_sin_fondo_blanco.png" alt="Huella Consciente Logo" width="80">
+    <h3>HUELLA CONSCIENTE</h3>
+  </div>
+
+  <div class="footer-links">
+    <div>
+      <h4>Encontranos:</h4>
+      <a href="https://www.tiktok.com/@huellaconsciente.oficial"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@huellaconsciente.oficial"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/huellaconsciente.oficial"><i class="fab fa-instagram"></i></a>
     </div>
-  </section>
 
-  <!-- Mapa -->
-  <section class="mapa">
-    <p>Encuentra refugios y centros de adopción en Mendoza.</p>
-  </section>
-
-  <!-- Donaciones -->
-  <section class="donaciones">
-    <h2>¡Haz tu Donación!</h2>
-    <p>Tu apoyo es crucial para ayudar a más animales.</p>
-    <button>Donar</button>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">
-      <h3>HUELLA CONSCIENTE</h3>
-    </div>
-    <div class="footer-links">
-      <p>Encuéntranos:</p>
-      <div class="socials">
-        <span><a href="https://www.tiktok.com/@huellaconsciente.oficial">TikTok</a></span>
-        <span><a href="https://www.instagram.com/huellaconsciente.oficial/">Instagram</a> </span>
-        <span><a href="https://www.youtube.com/@huellaconsciente.oficial">Youtube</a></span>
-      </div>
+    <div>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="Anunciantes.html" class="active">Anunciantes</a></li>
+        <li><a href="Anunciantes.html">Anunciantes</a></li>
       </ul>
+    </div>
+
+    <div>
       <ul>
         <li><a href="adoptar.html">Adopciones</a></li>
-        <li><a href="#">Donaciones</a></li>
+        <li><a href="donaciones.html">Donaciones</a></li>
         <li><a href="refugios.html">Refugios</a></li>
       </ul>
     </div>
-    <p class="copy">© 2025 Huella Consciente - Todos los derechos reservados</p>
-  </footer>
+  </div>
+
+  <div class="copy">
+    © 2025 Huella Consciente - Todos los derechos reservados
+  </div>
+</footer>
 </body>
 </html>
