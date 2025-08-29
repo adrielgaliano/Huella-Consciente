@@ -1,22 +1,35 @@
-/* Colores principales */
+/* =========================
+   Paleta y base
+========================= */
 :root {
   --beige: #f6f0e9;
   --naranja: #d67d4b;
   --marron: #4a2b17;
 }
 
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--beige);
   color: #333;
+  line-height: 1.5;
 }
 
-a {
-  color: white;
-}
+img { max-width: 100%; height: auto; display: block; }
 
-/* Header */
+a { color: rgb(0, 0, 0); }
+
+/* Titulares genéricos */
+h1, h2 { color: #222; margin: 0 0 10px; }
+p { margin: 0 auto; max-width: 980px; }
+
+/* =========================
+   Header
+========================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -27,42 +40,208 @@ header {
   flex-wrap: wrap;
 }
 
-header .logo {
+header .logo a {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-header nav ul li a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  color: inherit; /* mantiene el color del texto */
+  font-weight: bold; /* asegura que siga en negrita */
 }
 
-/* Logo en el header */
 header .logo img {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
 
-/* Secciones */
-section {
-  padding: 40px;
-  text-align: center;
+/* Menú centrado */
+nav { flex: 1; }
+
+nav ul.menu-center {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Anuncios */
+nav ul.menu-center li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul.menu-center li a:hover { color: var(--marron); }
+
+/* Botón de donar (header) */
+.donar-btn a {
+  background: var(--marron);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.donar-btn a:hover { background: #3a1f10; }
+
+/* =========================
+   Sección genérica
+========================= */
+section { padding: 48px 20px; text-align: center; }
+
+/* =========================
+   HOME / INICIO
+   (clases usadas en tu HTML)
+========================= */
+
+/* Pitch (intro) */
+.pitch {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.pitch h1 {
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--marron);
+}
+.pitch p {
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Video responsive */
+.video-section { padding-top: 20px; }
+.video-section h2 {
+  font-size: clamp(20px, 2.5vw, 28px);
+  color: #222;
+  margin-bottom: 18px;
+}
+
+/* Si prefieres sin wrapper, aplicamos al iframe directo */
+.video-section iframe {
+  width: clamp(280px, 80vw, 800px);
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  background: #000; /* evita borde gris mientras carga */
+}
+
+/* Aporte (dos columnas) */
+.aporte {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.aporte-text h2 {
+  margin: 0 0 8px;
+  color: var(--marron);
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+
+.aporte-text p { color: #444; margin: 0 0 16px; }
+
+.aporte-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.aporte-list span {
+  background: #ffe9dc;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid #ffd1ba;
+}
+
+.aporte img {
+  width: 420px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Integrantes (dos columnas invertidas) */
+.integrantes {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.integrantes img {
+  width: 420px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.integrantes-text h2 {
+  margin: 0 0 8px;
+  color: var(--marron);
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+.integrantes-text p { color: #444; }
+
+/* Colabora (CTA) */
+.colabora {
+  background: linear-gradient(180deg, #fff2ea, #ffe3d0);
+  padding: 56px 20px;
+}
+
+.colabora h2 {
+  color: var(--marron);
+  margin-bottom: 16px;
+}
+
+.colabora a {
+  display: inline-block;
+  background: var(--naranja);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform .15s ease, background .3s;
+}
+.colabora a:hover { background: var(--marron); transform: translateY(-2px); }
+
+/* Consciencia (bloque final) */
+.consciencia {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.consciencia h2 { color: var(--marron); }
+.consciencia p { color: #444; }
+
+/* =========================
+   Anuncios (ya presentes)
+========================= */
 .anuncios .anuncios-grid {
   display: flex;
   justify-content: center;
@@ -87,7 +266,9 @@ section {
   margin: auto;
 }
 
-/* Botones */
+/* =========================
+   Botones genéricos
+========================= */
 button {
   background: var(--naranja);
   color: white;
@@ -97,12 +278,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+button.dark { background: var(--marron); }
 
-button.dark {
-  background: var(--marron);
-}
-
-/* Adopta */
+/* =========================
+   Sección Adopta (banner)
+========================= */
 .adopta {
   display: flex;
   justify-content: space-between;
@@ -113,9 +293,7 @@ button.dark {
   flex-wrap: wrap;
 }
 
-.adopta .text {
-  max-width: 400px;
-}
+.adopta .text { max-width: 400px; }
 
 .adopta img {
   width: 350px;
@@ -125,7 +303,9 @@ button.dark {
   margin-top: 20px;
 }
 
-/* Testimonios */
+/* =========================
+   Testimonios
+========================= */
 .testimonios .testimonios-grid {
   display: flex;
   justify-content: center;
@@ -150,187 +330,527 @@ button.dark {
   margin: auto;
 }
 
-/* Mapa */
+/* =========================
+   Mapa
+========================= */
 .mapa {
   background: #eee;
   padding: 50px;
   font-weight: bold;
 }
 
-/* Donaciones */
-.donaciones {
-  padding: 40px;
+/* =========================
+   Donaciones
+========================= */
+.donaciones { padding: 40px; }
+.donaciones button { background: var(--marron); }
+
+.donacion-card {
+  background: white;
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.donaciones button {
-  background: var(--marron);
+.donacion-card img {
+  width: 100px; height: 100px;
+  object-fit: cover; border-radius: 50%; margin-bottom: 15px; 
+  display: block;           /* evita que quede alineada como inline */
+  margin: 0 auto 15px;      /* centrada y con espacio abajo */
 }
 
-/* Footer */
+.donacion-card h3 { color: var(--marron); margin-bottom: 10px; }
+.donacion-card p { color: #555; margin-bottom: 20px; }
+
+.lista-opciones {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lista-opciones li { margin: 0; }
+
+.btn-donar {
+  display: inline-block;
+  background: var(--naranja);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn-donar:hover { background: var(--marron); }
+
+/* =========================
+   Footer
+========================= */
 footer {
   background: var(--marron);
   color: white;
-  padding: 40px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
+footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .footer-logo h3 { margin: 0; font-size: 20px; font-weight: bold; }
 
 footer .footer-links {
   display: flex;
   gap: 50px;
-  margin: 20px 0;
+  margin: 30px 0;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
-}
+footer h4 { margin-bottom: 10px; font-size: 16px; font-weight: bold; }
+
+footer ul { list-style: none; padding: 0; margin: 0; }
+footer ul li { margin: 5px 0; }
 
 footer ul li a {
   color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 
-footer .copy {
-  margin-top: 20px;
-  font-size: 14px;
+footer a i {
+  font-size: 22px;
+  margin: 0 8px;
+  color: white;
+  transition: 0.3s;
 }
+footer a i:hover { color: var(--naranja); }
 
-/* --------------------
-   RESPONSIVE DESIGN
--------------------- */
+footer .copy { margin-top: 20px; font-size: 14px; opacity: 0.8; }
 
-/* Tablets */
-@media (max-width: 992px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header nav ul {
-    justify-content: center;
-  }
-
-  .adopta {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .adopta .text {
-    max-width: 100%;
-  }
-}
-
-/* Móviles */
-@media (max-width: 600px) {
-  header {
-    padding: 20px;
-  }
-
-  header .logo span {
-    font-size: 16px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .anuncios .card,
-  .testimonios .card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .adopta img {
-    width: 100%;
-  }
-
-  footer .footer-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-/* Cartel Próximamente */
-.proximamente {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  background: var(--beige);
-  padding: 40px;
-  text-align: center;
-}
-
-.proximamente .cartel {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 500px;
-}
-
-.proximamente h2 {
-  font-size: 28px;
-  color: var(--marron);
-  margin-bottom: 10px;
-}
-
-.proximamente p {
-  font-size: 18px;
-  color: #555;
-}
-
-/* Responsive para móviles */
-@media (max-width: 600px) {
-  .proximamente .cartel {
-    padding: 20px;
-  }
-
-  .proximamente h2 {
-    font-size: 22px;
-  }
-
-  .proximamente p {
-    font-size: 16px;
-  }
-}
-/* Secciones de anuncios y refugios */
-.anuncios, .refugios {
-  padding: 40px;
-  text-align: center;
-}
+/* =========================
+   Anunciantes / Refugios
+========================= */
+.anuncios, .refugios { padding: 40px; text-align: center; }
 
 .anuncios .grid, .refugios .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
   gap: 20px;
   margin-top: 20px;
 }
 
 .anuncios .card, .refugios .card {
   background: white;
-  padding: 15px;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+.anuncios .card:hover, .refugios .card:hover { transform: translateY(-5px); }
+
+.refugios .card img {
+  width: 100px; height: 100px;
+  object-fit: cover; border-radius: 50%; margin-bottom: 15px;
 }
 
-.anuncios .card h3, .refugios .card h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
+.refugios .card h3 { margin: 10px 0; font-size: 20px; color: var(--marron); }
+.refugios .card p { font-size: 14px; color: #555; margin: 10px 0 15px 0; }
+
+.social-links {
+  margin: 15px 0;
+  display: flex; justify-content: center; gap: 15px;
+}
+.social-links a { color: var(--marron); font-size: 22px; transition: color 0.3s; }
+.social-links a:hover { color: var(--naranja); }
+
+.refugios .card .btn-donar {
+  background: var(--naranja); color: white; padding: 10px 18px;
+  border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s;
+  display: inline-block; margin-top: 10px;
+}
+.refugios .card .btn-donar:hover { background: var(--marron); }
+
+.refugio-img {
+  width: 100%;              /* ocupa todo el ancho de la tarjeta */
+  height: 180px;            /* altura fija */
+  object-fit: cover;        /* recorta la imagen sin deformarla */
+  display: block;           /* evita que quede alineada como inline */
+  border-radius: 10px 10px 0 0; /* esquinas superiores redondeadas */
+  margin: 0 auto 15px;      /* centrada y con espacio abajo */
+}
+
+/* =========================
+   Adopción (lista)
+========================= */
+.adopta-lista {
+  padding: 40px;
+  background: #fdf7f4;
+  text-align: center;
+}
+
+.adopta-lista h2 {
+  font-size: 28px;
   color: var(--marron);
+  margin-bottom: 10px;
 }
 
-.anuncios .card img, .refugios .card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
+.adopta-lista p { color: #444; margin-bottom: 30px; }
+
+.pet-card {
+  display: flex;
+  align-items: center;
+  background: #ffe9dc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.pet-card img {
+  width: 120px; height: 120px; object-fit: cover; border-radius: 50%;
+  margin-right: 20px;
+}
+/* 📱 Ajustes para móviles */
+@media (max-width: 768px) {
+  .pet-card {
+    flex-direction: column;   /* Imagen arriba, texto abajo */
+    text-align: center;       /* Centrar texto */
+  }
+
+  .pet-card img {
+    margin: 0 0 15px 0;       /* Centrado con margen abajo */
+  }
+
+  .pet-info {
+    text-align: center;       /* Centrar también el texto */
+  }
+}
+.pet-info { flex: 1; min-width: 250px; text-align: left; }
+.pet-info h3 { margin: 0; color: var(--marron); }
+
+.pet-info ul {
+  list-style: none; padding: 0; margin: 8px 0;
+  display: flex; flex-wrap: wrap; gap: 15px;
+}
+.pet-info ul li { font-size: 14px; }
+
+.pet-info p { margin-top: 8px; font-size: 14px; color: #333; }
+
+.btn-adoptar {
+  background: var(--marron);
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-left: auto;
+}
+.btn-adoptar:hover { background: var(--naranja); }
+
+/* =========================
+   Contacto
+========================= */
+.contacto { text-align: center; padding: 40px 20px; }
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-top: 20px;
+}
+
+.card-contacto:hover { transform: translateY(-5px); }
+
+/* Tarjetas individuales */
+.card-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra horizontal */
+  justify-content: center; /* centra vertical */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Ajuste de las imágenes */
+.card-contacto img {
+  width: 80px;   /* tamaño uniforme */
+  height: 80px;  /* mantiene cuadrado */
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card-contacto h3 { color: var(--marron); margin-bottom: 10px; }
+
+.card-contacto .btn {
+  display: inline-block; background: var(--naranja); color: white;
+  padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;
+  transition: background 0.3s;
+}
+.card-contacto .btn:hover { background: var(--marron); }
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1100px) {
+  .aporte, .integrantes { margin: 0 12px; }
+}
+
+@media (max-width: 992px) {
+  header { flex-direction: column; text-align: center; }
+  header nav ul { justify-content: center; }
+
+  .adopta { flex-direction: column; text-align: center; }
+  .adopta .text { max-width: 100%; }
+}
+
+@media (max-width: 860px) {
+  .aporte, .integrantes {
+    flex-direction: column;
+    text-align: center;
+  }
+  .aporte img, .integrantes img { width: 100%; }
+  .aporte, .integrantes { gap: 18px; }
+}
+
+@media (max-width: 600px) {
+  header { padding: 20px; }
+  header .logo span { font-size: 16px; }
+
+  header nav ul { flex-direction: column; gap: 10px; margin-top: 15px; }
+
+  .anuncios .card, .testimonios .card { width: 100%; max-width: 300px; }
+  .adopta img { width: 100%; }
+
+  .donacion-card { padding: 20px; }
+
+  .lista-opciones { flex-direction: column; }
+  .lista-opciones li { width: 100%; }
+
+  .proximamente .cartel { padding: 20px; }
+  .proximamente h2 { font-size: 22px; }
+  .proximamente p { font-size: 16px; }
+
+  .btn-adoptar { margin: 15px auto 0; }
+}
+
+/* Cartel Próximamente */
+.proximamente {
+  display: flex; justify-content: center; align-items: center;
+  min-height: 300px; background: var(--beige);
+  padding: 40px; text-align: center;
+}
+.proximamente .cartel {
+  background: white; padding: 40px; border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px;
+}
+.proximamente h2 { font-size: 28px; color: var(--marron); margin-bottom: 10px; }
+.proximamente p { font-size: 18px; color: #555; }
+/* ===== Hamburguesa ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estado normal en desktop */
+nav ul.menu-center {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul.menu-center {
+    flex-direction: column;
+    align-items: center;
+    background: var(--naranja);
+    width: 100%;
+    max-height: 0;   /* oculto por defecto */
+    overflow: hidden;
+  }
+
+  nav ul.menu-center.active {
+    max-height: 400px; /* se despliega */
+    padding: 15px 0;
+  }
+
+  .donar-btn {
+    margin-top: 10px;
+  }
+}
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filtros input,
+.filtros select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+/* Botón de filtros */
+.btn-filtros {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-filtros:hover {
+  background: #e67e22;
+}
+
+/* Menú de filtros */
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+/* Ocultar */
+.oculto {
+  display: none;
+}
+
+/* En pantallas grandes (desktop), los filtros aparecen horizontales */
+@media (min-width: 768px) {
+  .filtros {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+/* Contenedor buscador + filtros */
+.buscador-filtros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.buscador-filtros input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid var(--marron);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.buscador-filtros button {
+  background: var(--marron);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.buscador-filtros button:hover {
+  background: #5c3a28;
+}
+
+/* Menú filtros desplegable */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto 20px;
+  max-width: 600px;
+}
+
+.filtros select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.oculto {
+  display: none;
+}
+.search-filters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 250px;
+}
+
+#toggleFilters {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--naranja, #ff914d);
+  color: white;
+  cursor: pointer;
+}
+
+#filtersMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#filtersMenu.oculto {
+  display: none;
 }
